@@ -20,4 +20,4 @@ You will also see any lint errors in the console.
     1. Import react and reactDom
     2. Create a react component
     3. Render a react component
-4. create /render an object 
+4. create /render an object + function

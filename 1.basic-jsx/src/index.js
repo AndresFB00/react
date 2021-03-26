@@ -4,6 +4,10 @@ import ReactDom from 'react-dom';
 
 // 2. Create a react component
 
+function formatoNombre(usuario) {
+    return usuario.primerNombre + '-' + usuario.primerApellido;
+  }
+
 const usuario = {
     primerNombre: 'Felipe',
     primerApellido: 'Guio'
@@ -12,7 +16,7 @@ const usuario = {
   
 
 const App = () => {
-return <div>Hola, {usuario.primerNombre} {usuario.primerApellido}</div>;
+return <div>Hola, {formatoNombre(usuario)}</div>;
 }      
 
 // 3. Render react
