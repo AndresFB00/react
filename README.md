@@ -9,4 +9,5 @@ React from Andres
 ### `git tag -a step-1 -m "step 1 new react component"`
 ### `git tag -a step-2 -m "step 2 Embedding Expressions in JSX"`
 ### `git tag -a step-3 -m "step 3 Embedding Expressions in JSX + function"`
+### `git tag -a step-4 -m "step 4 Updating the Rendered Element"`
 

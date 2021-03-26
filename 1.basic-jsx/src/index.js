@@ -4,23 +4,14 @@ import ReactDom from 'react-dom';
 
 // 2. Create a react component
 
-function formatoNombre(usuario) {
-    return usuario.primerNombre + '-' + usuario.primerApellido;
+function tick() {
+    const element = (
+      <div>
+        <h1>Hola, mundo!</h1>
+        <h2>Son las {new Date().toLocaleTimeString()}.</h2>
+      </div>
+    );
+    ReactDom.render(element, document.getElementById('root'));
   }
-
-const usuario = {
-    primerNombre: 'Felipe',
-    primerApellido: 'Guio'
-  };
-
   
-
-const App = () => {
-return <div>Hola, {formatoNombre(usuario)}</div>;
-}      
-
-// 3. Render react
-ReactDom.render(
-    <App />,
-    document.querySelector('#root')
-);
+  setInterval(tick, 1000);
