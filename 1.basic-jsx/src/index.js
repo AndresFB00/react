@@ -4,10 +4,15 @@ import ReactDom from 'react-dom';
 
 // 2. Create a react component
 
-var name = 'Felipe Guio';
+const usuario = {
+    primerNombre: 'Felipe',
+    primerApellido: 'Guio'
+  };
+
+  
 
 const App = () => {
-return <div>{name}</div>;
+return <div>Hola, {usuario.primerNombre} {usuario.primerApellido}</div>;
 }      
 
 // 3. Render react
