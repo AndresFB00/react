@@ -6,4 +6,5 @@ React from Andres
 ### `npm start`
 
 ### `git tag -a step-0 -m "step 0"`
+### `git tag -a step-1 -m "step 1 new react component"`
 
