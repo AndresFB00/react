@@ -4,14 +4,31 @@ import ReactDom from 'react-dom';
 
 // 2. Create a react component
 
-function tick() {
-    const element = (
-      <div>
-        <h1>Hola, mundo!</h1>
-        <h2>Son las {new Date().toLocaleTimeString()}.</h2>
+function Celular(props) {
+return <div>
+        Componente Celular,
+        Sistema Operativo: {props.so}
+        Marca: {props.marca}
       </div>
-    );
-    ReactDom.render(element, document.getElementById('root'));
   }
   
-  setInterval(tick, 1000);
+ 
+function Televisor(props) {
+  return <div>
+              Componente Televisor, 
+              Ancho: {props.ancho}
+              Alto: {props.alto}
+              Resolucion: {props.resolucion}
+              Marca: {props.marca}
+          </div>;
+}
+
+const variableTelevisor = <Televisor ancho="22 pulgadas" alto="22 pulgadas" resolucion="4k" marca="LG"></Televisor>;
+const variableCelular = <Celular so="IOs" marca="Iphone"></Celular>;
+
+
+  
+ReactDom.render(
+  variableCelular,
+  document.getElementById('root')
+);
