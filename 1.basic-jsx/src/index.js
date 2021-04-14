@@ -5,47 +5,44 @@ import ReactDom from 'react-dom';
 // 2. Create a react component
 
 
-function formatDate(date) {
-  return date.toLocaleDateString();
+function formatoFecha(fecha) {
+  return fecha.toLocaleDateString();
 }
 
-function Comment(props) {
+function Comentario(props) {
   return (
-    <div className="Comment">
-      <div className="UserInfo">
-        <img className="Avatar"
-          src={props.avatar.avatarUrl}
-          alt={props.avatar.avatarAlt}
+    <div claseNombre="Comentario">
+      <div claseNombre="UsuarioInfo">
+        <img claseNombre="Avatar"
+          src={props.autor.avatarUrl}
+          alt={props.autor.nombre}
         />
-        <div className="UserInfo-name">
-          {props.name}
+        <div claseNombre="UsuarioInfo-nombre">
+          {props.autor.nombre}
         </div>
       </div>
-      <div className="Comment-text">
-        {props.text}
-      </div>
-      <div className="Comment-date">
-        {formatDate(props.date)}
+      <div claseNombre="Comentario-texto">{props.texto}</div>
+      <div claseNombre="Comentario-date">
+        {formatoFecha(props.fecha)}
       </div>
     </div>
   );
 }
 
-var objetoAvatar = {
-  avatarUrl: 'https://placekitten.com/g/64/64',
-  avatarAlt: 'Imagen de gato blanco'
+
+const comentario = {
+  fecha: new Date(),
+  texto: 'Aprendiendo react :)',
+  autor:{
+     nombre: 'Hola pequeño gatito',
+     avatarUrl: 'https://placekitten.com/g/64/64',
+},
 };
-
-
-
-var nombre = "Edison2"; 
-var texto = "Le gustan los gatos"; 
-var fecha =  new Date(); 
-var componenteComentario = <Comment name={nombre}  text={texto} date={fecha} avatar={objetoAvatar}/>;
-
-
 ReactDom.render(
-  componenteComentario,
+  <Comentario
+    fecha={comentario.fecha} texto={comentario.texto} autor={comentario.autor} 
+  />,
   document.getElementById('root')
 ); 
+ 
 
