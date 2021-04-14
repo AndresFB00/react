@@ -36,10 +36,13 @@ var objetoAvatar = {
   avatarAlt: 'Imagen de gato blanco'
 };
 
+
+
 var nombre = "Edison2"; 
 var texto = "Le gustan los gatos"; 
 var fecha =  new Date(); 
 var componenteComentario = <Comment name={nombre}  text={texto} date={fecha} avatar={objetoAvatar}/>;
+
 
 ReactDom.render(
   componenteComentario,
